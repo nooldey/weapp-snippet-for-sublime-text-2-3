@@ -1,19 +1,16 @@
 <snippet>
 	<content><![CDATA[
 wx.playVoice({
-  var tempFilePath = res.tempFilePath
-  filePath: ${1:tempFilePath},
-  complete: function(){
+  //必须
+  filePath: ${1},
+  success: function(res) {
     ${2}
   },
-  success: function(res) {
+  fail: function(res) {
     ${3}
   },
-  fail: function(res) {
-    ${4}
-  },
   complete: function(res) {
-    ${5}
+    ${4}
   }
 });
 ]]></content>
